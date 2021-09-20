@@ -1,23 +1,25 @@
-.fluid-container {
-    display: grid;
-    grid-template-columns: 1fr  1fr 1fr;
-    grid-gap: 0px;
+.box {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    padding: 10px;
+}
+
+.item {
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    margin-left: 0px;
+    margin-right: 0px;
+    margin-top: 0px;
+    margin-bottom: 0px;
     background-color: black;
 }
 
-.comp {
-    padding: 40px;
-    background-color: rgb(41, 38, 38);
-    margin: 2px;
-    padding: 5px;
+.subitem {
+    padding: 0px;
+    margin: 0px;
+    background-color: rgb(59, 56, 56);
 }
 
-.grid-container {
-    display: grid;
-    grid-template-columns: 1fr  1fr;
-    grid-gap: 0px;
-    background-color: black;
-    padding: 8px;
-    place-items: center;
-    place-content: center;
-}

@@ -1,0 +1,45 @@
+
+body{
+    margin:0;
+    color:white;
+}
+
+.whiteFont {
+    color: white;
+}
+
+.greyFontColor {
+    color: rgb(129, 119, 119);
+}
+
+.smallfonts {
+    font-size: 9px;
+}
+
+.cap {
+    text-transform: uppercase;
+}
+
+.underline {
+    text-decoration: underline;
+}
+
+.whiteFont {
+    color: white;
+}
+
+.greyFontColor {
+    color: rgb(129, 119, 119);
+}
+
+.smallfonts {
+    font-size: 9px;
+}
+
+.cap {
+    text-transform: uppercase;
+}
+
+.underline {
+    text-decoration: underline;
+}
