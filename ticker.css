@@ -1,0 +1,25 @@
+
+.grid-child {
+    border-color: black;
+    padding: 15px;
+    border-top: 0px;
+    border-bottom: 0px;
+    border-left: 2px solid black;
+    border-right: 2px solid black;
+}
+
+
+.ticker-center{
+    font-size:50px;
+}
+
+.ticker-rightelem{
+    font-size:20px;
+}
+.ticker-left{
+    font-size:15px;
+}
+
+.item-box {
+    background-image: linear-gradient(to bottom right, rgb(103, 103, 235), rgb(66, 66, 247));
+}

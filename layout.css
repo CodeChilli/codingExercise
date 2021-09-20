@@ -1,0 +1,23 @@
+.fluid-container {
+    display: grid;
+    grid-template-columns: 1fr  1fr 1fr;
+    grid-gap: 0px;
+    background-color: black;
+}
+
+.comp {
+    padding: 40px;
+    background-color: rgb(41, 38, 38);
+    margin: 2px;
+    padding: 5px;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr  1fr;
+    grid-gap: 0px;
+    background-color: black;
+    padding: 8px;
+    place-items: center;
+    place-content: center;
+}

@@ -1,0 +1,154 @@
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link type="text/css" href="/ticker.css" rel="stylesheet" />
+    <link type="text/css" href="/form-controls.css" rel="stylesheet" />
+
+    <style>
+        .whiteFont {
+            color: white;
+        }
+
+        .greyFontColor {
+            color: rgb(129, 119, 119);
+        }
+
+        .smallfonts {
+            font-size: 9px;
+        }
+
+        .cap {
+            text-transform: uppercase;
+        }
+
+        .underline {
+            text-decoration: underline;
+        }
+
+        .box {
+            display: flex;
+            justify-content: center;
+            flex-direction: row;
+            padding: 10px;
+        }
+
+        .item {
+            padding-left: 10px;
+            padding-right: 10px;
+            padding-top: 4px;
+            padding-bottom: 4px;
+            margin-left: 0px;
+            margin-right: 0px;
+            margin-top: 0px;
+            margin-bottom: 0px;
+            background-color: black;
+        }
+
+        .subitem {
+            padding: 0px;
+            margin: 0px;
+            background-color: rgb(59, 56, 56);
+        }
+
+        body{
+            color:white;
+        }
+    </style>
+</head>
+
+<body style="margin:0">
+    <br />
+    <div class="box">
+        <div class="item " style="display:grid;" >
+            
+            <div class="item subitem">
+                <table style="width:93%;text-align:center;" >
+                    <tr>
+                        <td> <span class="whiteFont cap" style="margin-top:0px">Euro <span
+                                    class="greyFontColor">USD</span></span></td>
+                        <td align="right">
+                            <div style="width:100px;display:inline-block;margin-left:10;text-align:right;">
+                                <div style="white-space:nowrap;">
+                                    <img src="contacts.png" />
+                                    <span class="greyFontColor cap smallfonts underline" style="text-align:right">JR the
+                                        member</span>
+                                </div>
+                                <div>
+                                    <span class="greyFontColor smallfonts underline">Full amount</span>
+                                </div>
+                            </div>
+
+
+                        </td>
+
+                    </tr>
+                </table>
+            </div>
+            <div class="item subitem">
+                <div style="position:relative;border-width:thick;border-color:black;z-index:2;text-align: center;">
+                    <span style="background:black;padding:3px;color:white;">0.31</span>
+                </div>
+            </div>
+            <div class="item subitem">
+                <div style="text-align:center;">
+
+                    <div class="grid-child  item-box" style="display:inline-block">
+                        <div><span class="ticker-left">1.18</span><span class="ticker-center">05</span><span
+                                class="ticker-rightelem">0</span></div>
+                    </div>
+
+                    <div class="grid-child  item-box " style="display:inline-block">
+                        <div><span class="ticker-left">1.18</span><span class="ticker-center">05</span><span
+                                class="ticker-rightelem">0</span></div>
+                    </div>
+                </div>
+            </div>
+            <div class="item subitem">
+
+                <div style="width:100%;margin-top:0px;">
+                    <div style="width:auto;margin-left:auto;margin-right:auto;padding:3px;">
+                        <div style="text-align:center;">
+                            <button class="bid-ask form-control"> Bid</button>
+                            <select id="dropdowntheme" class="form-control">
+                                <option value="Mar">1,000,000</option>
+                                <option value="Gre">Green</option>
+                                <option value="Yel">Yellow</option>
+                                <option value="Blu">Blue</option>
+                                <option value="Red">Red</option>
+                            </select>
+                            <button class="bid-ask form-control"> Ask</button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="item subitem">
+                <div style="width:100%;margin-top:0px;">
+                    <div style="width:auto;margin-left:auto;margin-right:auto;">
+                        <div style="text-align:center;">
+                            <img src="contacts.png" />
+                            <img src="contacts.png" />
+
+                            <button class="bid-ask form-control"> 1M</button>
+                            <select id="dropdowntheme" class="form-control">
+                                <option value="Mar">Mar</option>
+                                <option value="Gre">Green</option>
+                                <option value="Yel">Yellow</option>
+                                <option value="Blu">Blue</option>
+                                <option value="Red">Red</option>
+                            </select>
+                            <button class="bid-ask form-control"> Ask</button>
+                            <img src="contacts.png" />
+                            <img src="contacts.png" />
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
