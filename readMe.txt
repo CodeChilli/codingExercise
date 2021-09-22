@@ -16,8 +16,5 @@ Known Issues
 -----------------
 calendar icon initialize date format 
 join calendar togethre
-company name
 font weight 800; 
-change linera graidnet 108 degrees top down
-ladder color -> blue color 
-
+misalign
