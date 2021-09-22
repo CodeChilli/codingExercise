@@ -1,0 +1,25 @@
+
+
+.currency-pair-container{
+    display:flex;justify-content:space-between;
+}
+
+.ticker-row{
+    display:flex;align-items:center
+}
+
+
+.ticker-center{
+    font-size:50px;
+}
+
+.ticker-rightelem{
+    font-size:20px;
+}
+.ticker-left{
+    font-size:15px;
+}
+
+.item-box {
+    background-image: linear-gradient(to bottom right, rgb(103, 103, 235), rgb(66, 66, 247));
+}

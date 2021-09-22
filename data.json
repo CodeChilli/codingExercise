@@ -1,0 +1,270 @@
+{
+	"table": "quote",
+	"action": "insert",
+	"data": [
+		{
+			"timestamp": "2021-09-22T03:53:38.236Z",
+			"symbol": "ETHUSD",
+			"bidSize": 9,
+			"bidPrice": 2880.9,
+			"askPrice": 2880.95,
+			"askSize": 154
+		},
+		{
+			"timestamp": "2021-09-22T03:53:38.305Z",
+			"symbol": "ETHUSD",
+			"bidSize": 9,
+			"bidPrice": 2880.9,
+			"askPrice": 2880.95,
+			"askSize": 319
+		},
+		{
+			"timestamp": "2021-09-22T03:53:38.453Z",
+			"symbol": "ETHUSD",
+			"bidSize": 18,
+			"bidPrice": 2880.85,
+			"askPrice": 2880.95,
+			"askSize": 319
+		},
+		{
+			"timestamp": "2021-09-22T03:53:38.467Z",
+			"symbol": "ETHUSD",
+			"bidSize": 18,
+			"bidPrice": 2880.85,
+			"askPrice": 2880.9,
+			"askSize": 34
+		},
+		{
+			"timestamp": "2021-09-22T03:53:38.468Z",
+			"symbol": "ETHUSD",
+			"bidSize": 18,
+			"bidPrice": 2880.85,
+			"askPrice": 2880.9,
+			"askSize": 353
+		},
+		{
+			"timestamp": "2021-09-22T03:53:38.468Z",
+			"symbol": "ETHUSD",
+			"bidSize": 18,
+			"bidPrice": 2880.85,
+			"askPrice": 2880.9,
+			"askSize": 426
+		},
+		{
+			"timestamp": "2021-09-22T03:53:38.468Z",
+			"symbol": "ETHUSD",
+			"bidSize": 40,
+			"bidPrice": 2880.55,
+			"askPrice": 2880.9,
+			"askSize": 426
+		},
+		{
+			"timestamp": "2021-09-22T03:53:38.482Z",
+			"symbol": "ETHUSD",
+			"bidSize": 40,
+			"bidPrice": 2880.55,
+			"askPrice": 2880.85,
+			"askSize": 18
+		},
+		{
+			"timestamp": "2021-09-22T03:53:38.483Z",
+			"symbol": "ETHUSD",
+			"bidSize": 40,
+			"bidPrice": 2880.55,
+			"askPrice": 2880.6,
+			"askSize": 73
+		},
+		{
+			"timestamp": "2021-09-22T03:53:38.484Z",
+			"symbol": "ETHUSD",
+			"bidSize": 40,
+			"bidPrice": 2880.55,
+			"askPrice": 2880.6,
+			"askSize": 499
+		},
+		{
+			"timestamp": "2021-09-22T03:53:38.487Z",
+			"symbol": "ETHUSD",
+			"bidSize": 2,
+			"bidPrice": 2879.8,
+			"askPrice": 2880.6,
+			"askSize": 499
+		},
+		{
+			"timestamp": "2021-09-22T03:53:38.488Z",
+			"symbol": "ETHUSD",
+			"bidSize": 2,
+			"bidPrice": 2879.8,
+			"askPrice": 2880.6,
+			"askSize": 533
+		},
+		{
+			"timestamp": "2021-09-22T03:53:38.502Z",
+			"symbol": "ETHUSD",
+			"bidSize": 2,
+			"bidPrice": 2879.8,
+			"askPrice": 2879.85,
+			"askSize": 34
+		},
+		{
+			"timestamp": "2021-09-22T03:53:38.504Z",
+			"symbol": "ETHUSD",
+			"bidSize": 138,
+			"bidPrice": 2879.4,
+			"askPrice": 2879.85,
+			"askSize": 34
+		},
+		{
+			"timestamp": "2021-09-22T03:53:38.506Z",
+			"symbol": "ETHUSD",
+			"bidSize": 138,
+			"bidPrice": 2879.4,
+			"askPrice": 2879.85,
+			"askSize": 143
+		},
+		{
+			"timestamp": "2021-09-22T03:53:38.518Z",
+			"symbol": "ETHUSD",
+			"bidSize": 10,
+			"bidPrice": 2879.45,
+			"askPrice": 2879.85,
+			"askSize": 143
+		},
+		{
+			"timestamp": "2021-09-22T03:53:38.525Z",
+			"symbol": "ETHUSD",
+			"bidSize": 10,
+			"bidPrice": 2879.45,
+			"askPrice": 2879.5,
+			"askSize": 245
+		},
+		{
+			"timestamp": "2021-09-22T03:53:38.526Z",
+			"symbol": "ETHUSD",
+			"bidSize": 10,
+			"bidPrice": 2879.45,
+			"askPrice": 2879.85,
+			"askSize": 143
+		},
+		{
+			"timestamp": "2021-09-22T03:53:38.539Z",
+			"symbol": "ETHUSD",
+			"bidSize": 10,
+			"bidPrice": 2879.45,
+			"askPrice": 2879.85,
+			"askSize": 34
+		},
+		{
+			"timestamp": "2021-09-22T03:53:38.544Z",
+			"symbol": "ETHUSD",
+			"bidSize": 10,
+			"bidPrice": 2879.7,
+			"askPrice": 2879.85,
+			"askSize": 34
+		},
+		{
+			"timestamp": "2021-09-22T03:53:38.545Z",
+			"symbol": "ETHUSD",
+			"bidSize": 10,
+			"bidPrice": 2879.7,
+			"askPrice": 2880.85,
+			"askSize": 18
+		},
+		{
+			"timestamp": "2021-09-22T03:53:38.551Z",
+			"symbol": "ETHUSD",
+			"bidSize": 148,
+			"bidPrice": 2880.8,
+			"askPrice": 2880.85,
+			"askSize": 18
+		},
+		{
+			"timestamp": "2021-09-22T03:53:38.564Z",
+			"symbol": "ETHUSD",
+			"bidSize": 10,
+			"bidPrice": 2879.7,
+			"askPrice": 2880.85,
+			"askSize": 18
+		},
+		{
+			"timestamp": "2021-09-22T03:53:38.568Z",
+			"symbol": "ETHUSD",
+			"bidSize": 10,
+			"bidPrice": 2879.7,
+			"askPrice": 2880.85,
+			"askSize": 91
+		},
+		{
+			"timestamp": "2021-09-22T03:53:38.581Z",
+			"symbol": "ETHUSD",
+			"bidSize": 18,
+			"bidPrice": 2879.4,
+			"askPrice": 2880.85,
+			"askSize": 91
+		},
+		{
+			"timestamp": "2021-09-22T03:53:38.584Z",
+			"symbol": "ETHUSD",
+			"bidSize": 18,
+			"bidPrice": 2879.4,
+			"askPrice": 2879.45,
+			"askSize": 138
+		},
+		{
+			"timestamp": "2021-09-22T03:53:38.599Z",
+			"symbol": "ETHUSD",
+			"bidSize": 18,
+			"bidPrice": 2879.4,
+			"askPrice": 2880.85,
+			"askSize": 91
+		},
+		{
+			"timestamp": "2021-09-22T03:53:38.601Z",
+			"symbol": "ETHUSD",
+			"bidSize": 18,
+			"bidPrice": 2879.4,
+			"askPrice": 2880.85,
+			"askSize": 18
+		},
+		{
+			"timestamp": "2021-09-22T03:53:38.797Z",
+			"symbol": "ETHUSD",
+			"bidSize": 18,
+			"bidPrice": 2879.4,
+			"askPrice": 2880.4,
+			"askSize": 284
+		},
+		{
+			"timestamp": "2021-09-22T03:53:38.814Z",
+			"symbol": "ETHUSD",
+			"bidSize": 18,
+			"bidPrice": 2879.4,
+			"askPrice": 2880.8,
+			"askSize": 120
+		},
+		{
+			"timestamp": "2021-09-22T03:53:38.829Z",
+			"symbol": "ETHUSD",
+			"bidSize": 28,
+			"bidPrice": 2879.4,
+			"askPrice": 2880.8,
+			"askSize": 120
+		},
+		{
+			"timestamp": "2021-09-22T03:53:38.839Z",
+			"symbol": "ETHUSD",
+			"bidSize": 28,
+			"bidPrice": 2879.4,
+			"askPrice": 2880.5,
+			"askSize": 120
+		},
+		{
+			"timestamp": "2021-09-22T03:53:38.855Z",
+			"symbol": "ETHUSD",
+			"bidSize": 10,
+			"bidPrice": 2879.45,
+			"askPrice": 2880.5,
+			"askSize": 120
+		}
+	]
+}
