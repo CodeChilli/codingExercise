@@ -1,7 +1,7 @@
 
 
 .currency-pair-container{
-    display:flex;justify-content:space-between;
+    display:flex;justify-content:space-between;line-height: 1.25;
 }
 
 .ticker-row{
@@ -30,4 +30,14 @@ position:relative;border-width:thick;border-color:black;z-index:2;text-align: ce
 }
 .mid-tick{
     background:black;padding:3px;color:white;
+}
+
+.bid-quoted-by,.ask-quoted-by
+{
+    line-height: 2;
+    color:rgb(129, 119, 119);
+}
+
+.ask-quoted-by-panel{
+    display:block;text-align: right;
 }

@@ -25,6 +25,7 @@
     background-color: rgb(59, 56, 56);
     border-width:10px;
     border-style: none;
+    line-height:0.5
 }
 
 .grid-child {

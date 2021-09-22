@@ -60,3 +60,9 @@
             border-width:1px;
             border-style:solid;
         }
+        svg,img.ImageAtBottomPanel { outline: 1px solid rgba(151, 149, 13, 0.637); padding:2px;width:20px;height:20px }
+        .currentColor{background-color: rgb(145, 145, 228);}
+        
+        svg.refresh-svg, svg#person{outline-width:0px}
+        
+        .full-amount-container {display:inline-block;margin-left:10;text-align:right;line-height: 1.25;}
