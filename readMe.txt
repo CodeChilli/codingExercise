@@ -16,5 +16,4 @@ Known Issues
 -----------------
 calendar icon initialize date format 
 join calendar togethre
-font weight 800; 
 misalign
