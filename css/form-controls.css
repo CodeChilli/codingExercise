@@ -49,6 +49,15 @@
             border-width:1px;
             border-style:solid;
             display:grid;display: grid;grid-template-columns: auto auto auto;
+            position:relative;
+        }
+
+        #lblPriceDropdown{
+        margin-right:15px;
+        }
+
+        .refreshCurrency{
+            position:absolute;top:0;float:left;margin-top:10px;white-space:nowrap;
         }
 
         img.refresh{

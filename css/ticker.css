@@ -35,7 +35,7 @@ position:relative;border-width:thick;border-color:black;z-index:2;text-align: ce
 .bid-quoted-by,.ask-quoted-by
 {
     line-height: 2;
-    color:rgb(129, 119, 119);
+    color:silver;
 }
 
 .ask-quoted-by-panel{
