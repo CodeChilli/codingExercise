@@ -16,11 +16,11 @@
 <body>
     <div style="background-color: black;margin:auto">
         <div class="box">
-            <div class="item " >
+            <div class="item ">
                 <div class="item subitem">
                     <div class="currency-pair-container">
                         <span>
-                            <span class="whiteFont cap underline" style="margin-top:0px">Euro</span>
+                            <span class="whiteFont cap underline" style="margin-top:0px">EUR</span>
                             <span class="greyFontColor">USD </span>
                         </span>
                         <div style="display:inline-block;margin-left:10;text-align:right;">
@@ -30,20 +30,22 @@
                                     <path
                                         d="M18,19v-2c0.45-0.223,1.737-1.755,1.872-2.952c0.354-0.027,0.91-0.352,1.074-1.635c0.088-0.689-0.262-1.076-0.474-1.198 c0,0,0.528-1.003,0.528-2.214c0-2.428-0.953-4.5-3-4.5c0,0-0.711-1.5-3-1.5c-4.242,0-6,2.721-6,6c0,1.104,0.528,2.214,0.528,2.214 c-0.212,0.122-0.562,0.51-0.474,1.198c0.164,1.283,0.72,1.608,1.074,1.635C10.263,15.245,11.55,16.777,12,17v2c-1,3-9,1-9,8h24 C27,20,19,22,18,19z">
                                     </path>
-                                </svg> <span class="greyFontColor cap smallfonts underline" style="text-align:right">JR the
+                                </svg>
+                                <span class="greyFontColor cap smallfonts underline" style="text-align:right">JR the
                                     member</span>
                             </div>
                             <div>
+                                <img src="./assets/diamonds-16.png" />
                                 <span class="greyFontColor smallfonts underline">Full amount</span>
                             </div>
                         </div>
-    
+
                     </div>
-    
+
                 </div>
                 <div class="item subitem">
-                    <div style="position:relative;border-width:thick;border-color:black;z-index:2;text-align: center;">
-                        <span style="background:black;padding:3px;color:white;">0.31</span>
+                    <div class="mid-tick-container">
+                        <span class="mid-tick">0.31</span>
                     </div>
                 </div>
                 <div class="item subitem">
@@ -52,7 +54,7 @@
                             <div><span class="ticker-left">1.18</span><span class="ticker-center">05</span><span
                                     class="ticker-rightelem">0</span></div>
                         </div>
-    
+
                         <div class="grid-child  item-box " style="display:inline-block">
                             <div><span class="ticker-left">1.18</span><span class="ticker-center">05</span><span
                                     class="ticker-rightelem">0</span></div>
@@ -60,28 +62,35 @@
                     </div>
                 </div>
                 <div class="item subitem">
-    
                     <div style="width:100%;margin-top:0px;">
-                        <div style="width:auto;margin-left:auto;margin-right:auto;padding:3px;">
-                            <div style="text-align:center;">
+                        <div class="priceControlPanel">
+                            <div class="subpriceControlPanel">
                                 <button class="bid-ask form-control"> Bid</button>
-                                <select id="dropdowntheme" class="form-control">
-                                    <option value="Mar">1,000,000</option>
-                                    <option value="Gre">Green</option>
-                                    <option value="Yel">Yellow</option>
-                                    <option value="Blu">Blue</option>
-                                    <option value="Red">Red</option>
-                                </select>
-                                <button class="bid-ask form-control"> Ask</button>
+                                <div id="dropdowntheme">
+                                    <label for="priceDropDown">
+                                        <svg class="refresh-svg" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
+                                            width="26" height="26" viewBox="0 0 32 32" style=" fill:#ffffff;">
+                                            <path
+                                                d="M 16 4 C 10.886719 4 6.617188 7.160156 4.875 11.625 L 6.71875 12.375 C 8.175781 8.640625 11.710938 6 16 6 C 19.242188 6 22.132813 7.589844 23.9375 10 L 20 10 L 20 12 L 27 12 L 27 5 L 25 5 L 25 8.09375 C 22.808594 5.582031 19.570313 4 16 4 Z M 25.28125 19.625 C 23.824219 23.359375 20.289063 26 16 26 C 12.722656 26 9.84375 24.386719 8.03125 22 L 12 22 L 12 20 L 5 20 L 5 27 L 7 27 L 7 23.90625 C 9.1875 26.386719 12.394531 28 16 28 C 21.113281 28 25.382813 24.839844 27.125 20.375 Z">
+                                            </path>
+                                        </svg>
+                                        EUR </label>
+                                    <select id="priceDropDown" name="priceDropDown" class="form-control">
+                                        <option value="Mar">1,000,000</option>
+                                        <option value="Mar">1,000,000</option>
+
+                                    </select>
+                                </div>
+                                <button class="bid-ask form-control">Ask</button>
                             </div>
                         </div>
                     </div>
-    
+
                 </div>
                 <div class="item subitem">
-                    <div style="width:100%;margin-top:0px;">
-                        <div style="width:auto;margin-left:auto;margin-right:auto;">
-                            <div style="text-align:center;">
+                    <div class="dateSelectorParentPanel">
+                        <div>
+                            <div class="dateSelectorPanel">
                                 <svg class="icon-border" xmlns="http://www.w3.org/2000/svg"
                                     xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img"
                                     id="footer-icon-name" width="1em" height="1em" preserveAspectRatio="xMidYMid meet"
@@ -106,18 +115,23 @@
                                         </path>
                                     </g>
                                 </svg>
-    
-                                <button class="bid-ask form-control"> 1M</button>
-                                <select id="dropdowntheme" class="form-control">
-                                    <option value="Mar">Mar</option>
-                                    <option value="Gre">Green</option>
-                                    <option value="Yel">Yellow</option>
-                                    <option value="Blu">Blue</option>
-                                    <option value="Red">Red</option>
-                                </select>
+
+                                <label class="bid-ask form-control"> 1M</label>
+
+                                <input class="date" type="date" name="date" required pattern="\d{4}-\d{2}-\d{2}"
+                                    min="2021-04-01" max="2021-10-31">
+                                    <label for="date">
+                                        <svg class="icon-border" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" id="footer-icon-name" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 36 36">
+                                            <path class="clr-i-solid clr-i-solid-path-1" d="M32.25 6h-4v3a2.2 2.2 0 1 1-4.4 0V6H12.2v3a2.2 2.2 0 0 1-4.4 0V6h-4A1.78 1.78 0 0 0 2 7.81v22.38A1.78 1.78 0 0 0 3.75 32h28.5A1.78 1.78 0 0 0 34 30.19V7.81A1.78 1.78 0 0 0 32.25 6zM10 26H8v-2h2zm0-5H8v-2h2zm0-5H8v-2h2zm6 10h-2v-2h2zm0-5h-2v-2h2zm0-5h-2v-2h2zm6 10h-2v-2h2zm0-5h-2v-2h2zm0-5h-2v-2h2zm6 10h-2v-2h2zm0-5h-2v-2h2zm0-5h-2v-2h2z" fill="currentColor"></path>
+                                            <path class="clr-i-solid clr-i-solid-path-2" d="M10 10a1 1 0 0 0 1-1V3a1 1 0 0 0-2 0v6a1 1 0 0 0 1 1z" fill="currentColor">
+                                            </path>
+                                            <path class="clr-i-solid clr-i-solid-path-3" d="M26 10a1 1 0 0 0 1-1V3a1 1 0 0 0-2 0v6a1 1 0 0 0 1 1z" fill="currentColor">
+                                            </path>
+                                        </svg>
+                                    </label>
                                 <svg class="icon-border" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-                                    viewBox="0 0 24 24" fill="none" stroke="blue" stroke-width="2" stroke-linecap="round"
-                                    stroke-linejoin="round" class="feather feather-file-text">
+                                    viewBox="0 0 24 24" fill="none" stroke="blue" stroke-width="2"
+                                    stroke-linecap="round" stroke-linejoin="round" class="feather feather-file-text">
                                     <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
                                     <polyline points="14 2 14 8 20 8"></polyline>
                                     <line x1="16" y1="13" x2="8" y2="13"></line>
@@ -125,8 +139,8 @@
                                     <polyline points="10 9 9 9 8 9"></polyline>
                                 </svg>
                                 <svg class="icon-border" xmlns="http://www.w3.org/2000/svg" width="20" height="20"
-                                    viewBox="0 0 24 24" fill="none" stroke="blue" stroke-width="2" stroke-linecap="round"
-                                    stroke-linejoin="round" class="feather feather-layers">
+                                    viewBox="0 0 24 24" fill="none" stroke="blue" stroke-width="2"
+                                    stroke-linecap="round" stroke-linejoin="round" class="feather feather-layers">
                                     <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
                                     <polyline points="2 17 12 22 22 17"></polyline>
                                     <polyline points="2 12 12 17 22 12"></polyline>
@@ -134,17 +148,17 @@
                             </div>
                         </div>
                     </div>
-    
+
                 </div>
 
-            
-            </div>
-            <div class="item " >
+
+            </div>>
+            <div class="item ">
                 <div class="item subitem">
                     <div class="currency-pair-container">
                         <span>
-                            <span class="whiteFont cap underline" style="margin-top:0px">Euro</span>
-                            <span class="greyFontColor"> USD</span>
+                            <span class="whiteFont cap underline" style="margin-top:0px">EUR</span>
+                            <span class="greyFontColor">USD </span>
                         </span>
                         <div style="display:inline-block;margin-left:10;text-align:right;">
                             <div style="white-space:nowrap;">
@@ -153,20 +167,22 @@
                                     <path
                                         d="M18,19v-2c0.45-0.223,1.737-1.755,1.872-2.952c0.354-0.027,0.91-0.352,1.074-1.635c0.088-0.689-0.262-1.076-0.474-1.198 c0,0,0.528-1.003,0.528-2.214c0-2.428-0.953-4.5-3-4.5c0,0-0.711-1.5-3-1.5c-4.242,0-6,2.721-6,6c0,1.104,0.528,2.214,0.528,2.214 c-0.212,0.122-0.562,0.51-0.474,1.198c0.164,1.283,0.72,1.608,1.074,1.635C10.263,15.245,11.55,16.777,12,17v2c-1,3-9,1-9,8h24 C27,20,19,22,18,19z">
                                     </path>
-                                </svg> <span class="greyFontColor cap smallfonts underline" style="text-align:right">JR the
+                                </svg>
+                                <span class="greyFontColor cap smallfonts underline" style="text-align:right">JR the
                                     member</span>
                             </div>
                             <div>
+                                <img src="./assets/diamonds-16.png" />
                                 <span class="greyFontColor smallfonts underline">Full amount</span>
                             </div>
                         </div>
-    
+
                     </div>
-    
+
                 </div>
                 <div class="item subitem">
-                    <div style="position:relative;border-width:thick;border-color:black;z-index:2;text-align: center;">
-                        <span style="background:black;padding:3px;color:white;">0.31</span>
+                    <div class="mid-tick-container">
+                        <span class="mid-tick">0.31</span>
                     </div>
                 </div>
                 <div class="item subitem">
@@ -175,7 +191,7 @@
                             <div><span class="ticker-left">1.18</span><span class="ticker-center">05</span><span
                                     class="ticker-rightelem">0</span></div>
                         </div>
-    
+
                         <div class="grid-child  item-box " style="display:inline-block">
                             <div><span class="ticker-left">1.18</span><span class="ticker-center">05</span><span
                                     class="ticker-rightelem">0</span></div>
@@ -183,28 +199,35 @@
                     </div>
                 </div>
                 <div class="item subitem">
-    
                     <div style="width:100%;margin-top:0px;">
-                        <div style="width:auto;margin-left:auto;margin-right:auto;padding:3px;">
-                            <div style="text-align:center;">
+                        <div class="priceControlPanel">
+                            <div class="subpriceControlPanel">
                                 <button class="bid-ask form-control"> Bid</button>
-                                <select id="dropdowntheme" class="form-control">
-                                    <option value="Mar">1,000,000</option>
-                                    <option value="Gre">Green</option>
-                                    <option value="Yel">Yellow</option>
-                                    <option value="Blu">Blue</option>
-                                    <option value="Red">Red</option>
-                                </select>
-                                <button class="bid-ask form-control"> Ask</button>
+                                <div id="dropdowntheme">
+                                    <label for="priceDropDown">
+                                        <svg class="refresh-svg" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
+                                            width="26" height="26" viewBox="0 0 32 32" style=" fill:#ffffff;">
+                                            <path
+                                                d="M 16 4 C 10.886719 4 6.617188 7.160156 4.875 11.625 L 6.71875 12.375 C 8.175781 8.640625 11.710938 6 16 6 C 19.242188 6 22.132813 7.589844 23.9375 10 L 20 10 L 20 12 L 27 12 L 27 5 L 25 5 L 25 8.09375 C 22.808594 5.582031 19.570313 4 16 4 Z M 25.28125 19.625 C 23.824219 23.359375 20.289063 26 16 26 C 12.722656 26 9.84375 24.386719 8.03125 22 L 12 22 L 12 20 L 5 20 L 5 27 L 7 27 L 7 23.90625 C 9.1875 26.386719 12.394531 28 16 28 C 21.113281 28 25.382813 24.839844 27.125 20.375 Z">
+                                            </path>
+                                        </svg>
+                                        EUR </label>
+                                    <select id="priceDropDown" name="priceDropDown" class="form-control">
+                                        <option value="Mar">1,000,000</option>
+                                        <option value="Mar">1,000,000</option>
+
+                                    </select>
+                                </div>
+                                <button class="bid-ask form-control">Ask</button>
                             </div>
                         </div>
                     </div>
-    
+
                 </div>
                 <div class="item subitem">
-                    <div style="width:100%;margin-top:0px;">
-                        <div style="width:auto;margin-left:auto;margin-right:auto;">
-                            <div style="text-align:center;">
+                    <div class="dateSelectorParentPanel">
+                        <div>
+                            <div class="dateSelectorPanel">
                                 <svg class="icon-border" xmlns="http://www.w3.org/2000/svg"
                                     xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img"
                                     id="footer-icon-name" width="1em" height="1em" preserveAspectRatio="xMidYMid meet"
@@ -229,18 +252,23 @@
                                         </path>
                                     </g>
                                 </svg>
-    
-                                <button class="bid-ask form-control"> 1M</button>
-                                <select id="dropdowntheme" class="form-control">
-                                    <option value="Mar">Mar</option>
-                                    <option value="Gre">Green</option>
-                                    <option value="Yel">Yellow</option>
-                                    <option value="Blu">Blue</option>
-                                    <option value="Red">Red</option>
-                                </select>
+
+                                <label class="bid-ask form-control"> 1M</label>
+
+                                <input class="date" type="date" name="date" required pattern="\d{4}-\d{2}-\d{2}"
+                                    min="2021-04-01" max="2021-10-31">
+                                    <label for="date">
+                                        <svg class="icon-border" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" id="footer-icon-name" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 36 36">
+                                            <path class="clr-i-solid clr-i-solid-path-1" d="M32.25 6h-4v3a2.2 2.2 0 1 1-4.4 0V6H12.2v3a2.2 2.2 0 0 1-4.4 0V6h-4A1.78 1.78 0 0 0 2 7.81v22.38A1.78 1.78 0 0 0 3.75 32h28.5A1.78 1.78 0 0 0 34 30.19V7.81A1.78 1.78 0 0 0 32.25 6zM10 26H8v-2h2zm0-5H8v-2h2zm0-5H8v-2h2zm6 10h-2v-2h2zm0-5h-2v-2h2zm0-5h-2v-2h2zm6 10h-2v-2h2zm0-5h-2v-2h2zm0-5h-2v-2h2zm6 10h-2v-2h2zm0-5h-2v-2h2zm0-5h-2v-2h2z" fill="currentColor"></path>
+                                            <path class="clr-i-solid clr-i-solid-path-2" d="M10 10a1 1 0 0 0 1-1V3a1 1 0 0 0-2 0v6a1 1 0 0 0 1 1z" fill="currentColor">
+                                            </path>
+                                            <path class="clr-i-solid clr-i-solid-path-3" d="M26 10a1 1 0 0 0 1-1V3a1 1 0 0 0-2 0v6a1 1 0 0 0 1 1z" fill="currentColor">
+                                            </path>
+                                        </svg>
+                                    </label>
                                 <svg class="icon-border" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-                                    viewBox="0 0 24 24" fill="none" stroke="blue" stroke-width="2" stroke-linecap="round"
-                                    stroke-linejoin="round" class="feather feather-file-text">
+                                    viewBox="0 0 24 24" fill="none" stroke="blue" stroke-width="2"
+                                    stroke-linecap="round" stroke-linejoin="round" class="feather feather-file-text">
                                     <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
                                     <polyline points="14 2 14 8 20 8"></polyline>
                                     <line x1="16" y1="13" x2="8" y2="13"></line>
@@ -248,8 +276,8 @@
                                     <polyline points="10 9 9 9 8 9"></polyline>
                                 </svg>
                                 <svg class="icon-border" xmlns="http://www.w3.org/2000/svg" width="20" height="20"
-                                    viewBox="0 0 24 24" fill="none" stroke="blue" stroke-width="2" stroke-linecap="round"
-                                    stroke-linejoin="round" class="feather feather-layers">
+                                    viewBox="0 0 24 24" fill="none" stroke="blue" stroke-width="2"
+                                    stroke-linecap="round" stroke-linejoin="round" class="feather feather-layers">
                                     <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
                                     <polyline points="2 17 12 22 22 17"></polyline>
                                     <polyline points="2 12 12 17 22 12"></polyline>
@@ -257,16 +285,17 @@
                             </div>
                         </div>
                     </div>
-    
+
                 </div>
+
+
             </div>
-            <div class="item " >
-    
+            <div class="item ">
                 <div class="item subitem">
                     <div class="currency-pair-container">
                         <span>
-                            <span class="whiteFont cap underline" style="margin-top:0px">Euro</span>
-                            <span class="greyFontColor"> USD</span>
+                            <span class="whiteFont cap underline" style="margin-top:0px">EUR</span>
+                            <span class="greyFontColor">USD </span>
                         </span>
                         <div style="display:inline-block;margin-left:10;text-align:right;">
                             <div style="white-space:nowrap;">
@@ -275,20 +304,22 @@
                                     <path
                                         d="M18,19v-2c0.45-0.223,1.737-1.755,1.872-2.952c0.354-0.027,0.91-0.352,1.074-1.635c0.088-0.689-0.262-1.076-0.474-1.198 c0,0,0.528-1.003,0.528-2.214c0-2.428-0.953-4.5-3-4.5c0,0-0.711-1.5-3-1.5c-4.242,0-6,2.721-6,6c0,1.104,0.528,2.214,0.528,2.214 c-0.212,0.122-0.562,0.51-0.474,1.198c0.164,1.283,0.72,1.608,1.074,1.635C10.263,15.245,11.55,16.777,12,17v2c-1,3-9,1-9,8h24 C27,20,19,22,18,19z">
                                     </path>
-                                </svg> <span class="greyFontColor cap smallfonts underline" style="text-align:right">JR the
+                                </svg>
+                                <span class="greyFontColor cap smallfonts underline" style="text-align:right">JR the
                                     member</span>
                             </div>
                             <div>
+                                <img src="./assets/diamonds-16.png" />
                                 <span class="greyFontColor smallfonts underline">Full amount</span>
                             </div>
                         </div>
-    
+
                     </div>
-    
+
                 </div>
                 <div class="item subitem">
-                    <div style="position:relative;border-width:thick;border-color:black;z-index:2;text-align: center;">
-                        <span style="background:black;padding:3px;color:white;">0.31</span>
+                    <div class="mid-tick-container">
+                        <span class="mid-tick">0.31</span>
                     </div>
                 </div>
                 <div class="item subitem">
@@ -297,7 +328,7 @@
                             <div><span class="ticker-left">1.18</span><span class="ticker-center">05</span><span
                                     class="ticker-rightelem">0</span></div>
                         </div>
-    
+
                         <div class="grid-child  item-box " style="display:inline-block">
                             <div><span class="ticker-left">1.18</span><span class="ticker-center">05</span><span
                                     class="ticker-rightelem">0</span></div>
@@ -306,26 +337,34 @@
                 </div>
                 <div class="item subitem">
                     <div style="width:100%;margin-top:0px;">
-                        <div style="width:auto;margin-left:auto;margin-right:auto;padding:3px;">
-                            <div style="text-align:center;">
+                        <div class="priceControlPanel">
+                            <div class="subpriceControlPanel">
                                 <button class="bid-ask form-control"> Bid</button>
-                                <select id="dropdowntheme" class="form-control">
-                                    <option value="Mar">1,000,000</option>
-                                    <option value="Gre">Green</option>
-                                    <option value="Yel">Yellow</option>
-                                    <option value="Blu">Blue</option>
-                                    <option value="Red">Red</option>
-                                </select>
-                                <button class="bid-ask form-control"> Ask</button>
+                                <div id="dropdowntheme">
+                                    <label for="priceDropDown">
+                                        <svg class="refresh-svg" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
+                                            width="26" height="26" viewBox="0 0 32 32" style=" fill:#ffffff;">
+                                            <path
+                                                d="M 16 4 C 10.886719 4 6.617188 7.160156 4.875 11.625 L 6.71875 12.375 C 8.175781 8.640625 11.710938 6 16 6 C 19.242188 6 22.132813 7.589844 23.9375 10 L 20 10 L 20 12 L 27 12 L 27 5 L 25 5 L 25 8.09375 C 22.808594 5.582031 19.570313 4 16 4 Z M 25.28125 19.625 C 23.824219 23.359375 20.289063 26 16 26 C 12.722656 26 9.84375 24.386719 8.03125 22 L 12 22 L 12 20 L 5 20 L 5 27 L 7 27 L 7 23.90625 C 9.1875 26.386719 12.394531 28 16 28 C 21.113281 28 25.382813 24.839844 27.125 20.375 Z">
+                                            </path>
+                                        </svg>
+                                        EUR </label>
+                                    <select id="priceDropDown" name="priceDropDown" class="form-control">
+                                        <option value="Mar">1,000,000</option>
+                                        <option value="Mar">1,000,000</option>
+
+                                    </select>
+                                </div>
+                                <button class="bid-ask form-control">Ask</button>
                             </div>
                         </div>
                     </div>
-    
+
                 </div>
                 <div class="item subitem">
-                    <div style="width:100%;margin-top:0px;">
-                        <div style="width:auto;margin-left:auto;margin-right:auto;">
-                            <div style="text-align:center;">
+                    <div class="dateSelectorParentPanel">
+                        <div>
+                            <div class="dateSelectorPanel">
                                 <svg class="icon-border" xmlns="http://www.w3.org/2000/svg"
                                     xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img"
                                     id="footer-icon-name" width="1em" height="1em" preserveAspectRatio="xMidYMid meet"
@@ -350,18 +389,23 @@
                                         </path>
                                     </g>
                                 </svg>
-    
-                                <button class="bid-ask form-control"> 1M</button>
-                                <select id="dropdowntheme" class="form-control">
-                                    <option value="Mar">Mar</option>
-                                    <option value="Gre">Green</option>
-                                    <option value="Yel">Yellow</option>
-                                    <option value="Blu">Blue</option>
-                                    <option value="Red">Red</option>
-                                </select>
+
+                                <label class="bid-ask form-control"> 1M</label>
+
+                                <input class="date" type="date" name="date" required pattern="\d{4}-\d{2}-\d{2}"
+                                    min="2021-04-01" max="2021-10-31">
+                                    <label for="date">
+                                        <svg class="icon-border" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" id="footer-icon-name" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 36 36">
+                                            <path class="clr-i-solid clr-i-solid-path-1" d="M32.25 6h-4v3a2.2 2.2 0 1 1-4.4 0V6H12.2v3a2.2 2.2 0 0 1-4.4 0V6h-4A1.78 1.78 0 0 0 2 7.81v22.38A1.78 1.78 0 0 0 3.75 32h28.5A1.78 1.78 0 0 0 34 30.19V7.81A1.78 1.78 0 0 0 32.25 6zM10 26H8v-2h2zm0-5H8v-2h2zm0-5H8v-2h2zm6 10h-2v-2h2zm0-5h-2v-2h2zm0-5h-2v-2h2zm6 10h-2v-2h2zm0-5h-2v-2h2zm0-5h-2v-2h2zm6 10h-2v-2h2zm0-5h-2v-2h2zm0-5h-2v-2h2z" fill="currentColor"></path>
+                                            <path class="clr-i-solid clr-i-solid-path-2" d="M10 10a1 1 0 0 0 1-1V3a1 1 0 0 0-2 0v6a1 1 0 0 0 1 1z" fill="currentColor">
+                                            </path>
+                                            <path class="clr-i-solid clr-i-solid-path-3" d="M26 10a1 1 0 0 0 1-1V3a1 1 0 0 0-2 0v6a1 1 0 0 0 1 1z" fill="currentColor">
+                                            </path>
+                                        </svg>
+                                    </label>
                                 <svg class="icon-border" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-                                    viewBox="0 0 24 24" fill="none" stroke="blue" stroke-width="2" stroke-linecap="round"
-                                    stroke-linejoin="round" class="feather feather-file-text">
+                                    viewBox="0 0 24 24" fill="none" stroke="blue" stroke-width="2"
+                                    stroke-linecap="round" stroke-linejoin="round" class="feather feather-file-text">
                                     <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
                                     <polyline points="14 2 14 8 20 8"></polyline>
                                     <line x1="16" y1="13" x2="8" y2="13"></line>
@@ -369,8 +413,8 @@
                                     <polyline points="10 9 9 9 8 9"></polyline>
                                 </svg>
                                 <svg class="icon-border" xmlns="http://www.w3.org/2000/svg" width="20" height="20"
-                                    viewBox="0 0 24 24" fill="none" stroke="blue" stroke-width="2" stroke-linecap="round"
-                                    stroke-linejoin="round" class="feather feather-layers">
+                                    viewBox="0 0 24 24" fill="none" stroke="blue" stroke-width="2"
+                                    stroke-linecap="round" stroke-linejoin="round" class="feather feather-layers">
                                     <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
                                     <polyline points="2 17 12 22 22 17"></polyline>
                                     <polyline points="2 12 12 17 22 12"></polyline>
@@ -378,10 +422,12 @@
                             </div>
                         </div>
                     </div>
-    
+
                 </div>
+
+
             </div>
-        </div>  
+        </div>
     </div>
 
 

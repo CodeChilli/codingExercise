@@ -5,7 +5,7 @@
 }
 
 .ticker-row{
-    display:flex;align-items:center
+    display:flex;justify-content: center;margin: auto;padding-bottom: 5px;
 }
 
 
@@ -22,4 +22,12 @@
 
 .item-box {
     background-image: linear-gradient(to bottom right, rgb(103, 103, 235), rgb(66, 66, 247));
+}
+
+.mid-tick-container
+{
+position:relative;border-width:thick;border-color:black;z-index:2;text-align: center;top: 8px;
+}
+.mid-tick{
+    background:black;padding:3px;color:white;
 }

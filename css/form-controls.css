@@ -1,5 +1,3 @@
-
-
         .form-control {
             padding-left: 10px;
             padding-right: 10px;
@@ -17,18 +15,48 @@
             
         }
 
-        button.bid-ask {
-            background-color: black;
-            border-width: 1px;
-            border-color: blue;
+        button, button.bid-ask {
+            background-color: rgb(59, 56, 56);
+            border-width: 2px;
+            border-color: rgb(66, 66, 247);
+            border-style:solid;
             border-radius: 5px;
             font-size: smaller;
             color: white;
         }
 
-        select#dropdowntheme {
-            background-color: black;
-            font-size: smaller;
+        select#priceDropDown, button.basecurrency, input.date,label {
+            background-color: rgb(59, 56, 56);
+            font-size: x-small;
             color: white;
             width:auto;
+        }
+
+        select#priceDropDown{
+            border:0;
+        }
+
+        .dateSelectorParentPanel{
+            width:100%;margin-top:0px;display:flex;padding-top: 5px;
+        }
+
+        .dateSelectorPanel{
+            display:flex;gap:4px;width:auto;margin-left:auto;margin-right:auto;
+        }
+
+        #dropdowntheme{
+            border-color: rgb(204, 204, 204);
+            border-width:1px;
+            border-style:solid;
+            display:grid;display: grid;grid-template-columns: auto auto auto;
+        }
+
+        img.refresh{
+            margin-right:3px
+        }
+
+        .date{
+            border-color: rgb(204, 204, 204);
+            border-width:1px;
+            border-style:solid;
         }

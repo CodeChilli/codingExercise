@@ -1,10 +1,10 @@
 .box {
     display: flex;
     justify-content: center;
-    flex-direction: row;
     padding-top: 10px;
     padding-bottom: 10px;
-    gap:2px;
+    background: white;
+    
 }
 
 .item {
@@ -14,12 +14,17 @@
     margin-top: 0px;
     margin-bottom: 0px;
     background-color: black;
+    border-color:black;
+    border-width:3px;
+    border-style: solid;
 }
 
 .subitem {
     padding: 0px;
     margin: 0px;
     background-color: rgb(59, 56, 56);
+    border-width:10px;
+    border-style: none;
 }
 
 .grid-child {
@@ -29,4 +34,16 @@
     border-bottom: 0px;
     border-left: 2px solid black;
     border-right: 2px solid black;
+    margin: 2px;
+}
+
+.priceControlPanel,.subpriceControlPanel{
+    display:flex;
+    gap:3px;
+    justify-content:center;
+    text-align:center;
+    width:100%;
+}
+.subpriceControlPanel{
+    margin-top:2px;
 }
