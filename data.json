@@ -6,11 +6,7 @@ wss://v2api.coinflex.com/v2/websocket
 	"timestamp": "1632314556729"
 }
 
-{
-	"op": "subscribe", 
-	"tag": 1,
-	"args": ["market:FLEX-USD"]
-  }
+
 
 {"success":true,"tag":"1","event":"subscribe","channel":"market:FLEX-USD","timestamp":"1632314569799"}
 
