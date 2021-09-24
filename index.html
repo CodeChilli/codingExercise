@@ -6,20 +6,18 @@
     <link type="text/css" href="./css/form-controls.css" rel="stylesheet" />
     <link type="text/css" href="./css/commons.css" rel="stylesheet" />
     <link type="text/css" href="./css/layout.css" rel="stylesheet" />
-    <base href="/">
+    <base href=".">
     <script src="./libs/jquery-3.2.1.min.js"></script>
-    <script src="./app/market_price_app.js"></script>
 </head>
 
 <body>
-    <div style="background-color: black;margin:auto">
-        <div class="box">
+        <div class="box" id="pods">
             <div class="item ">
                 <div class="item subitem">
                     <div class="currency-pair-container">
                         <span>
-                            <span class="whiteFont cap underline" style="margin-top:0px">EUR</span>
-                            <span class="greyFontColor">USD </span>
+                            <span class="whiteFont cap underline" id="baseCcy1" style="margin-top:0px"></span>
+                            <span class="greyFontColor" id="quoteCcy1"> </span>
                         </span>
                         <div class="full-amount-container">
                             <div style="white-space:nowrap;">
@@ -48,15 +46,21 @@
                 </div>
                 <div class="item subitem">
                     <div class="ticker-row">
-                        <div class="grid-child  item-box" style="display:inline-block">
-                            <div><span class="ticker-left">1.18</span><span class="ticker-center">05</span><span
-                                    class="ticker-rightelem">0</span></div>
-                            <div><span class="bid-quoted-by">BNP</span></div>
+                        <div class="grid-child  item-box">
+                            <div><span id="podBid1" class="ticker-left">1.18</span>
+                                <span id="curPrice1" class="ticker-center">05</span>
+                                <span id="podBid11" class="ticker-rightelem">0</span>
+                            </div>
+                            <div><span id="podBase1" class="bid-quoted-by">BNP</span></div>
                         </div>
-                        <div class="grid-child  item-box " style="display:inline-block">
-                            <div><span class="ticker-left">1.18</span><span class="ticker-center">05</span><span
-                                    class="ticker-rightelem">0</span></div>
-                            <div class="ask-quoted-by-panel"><span class="ask-quoted-by">BNP</span></div>
+                        <div class="grid-child  item-box ">
+                            <div><span id="podAsk1" class="ticker-left">1.18</span>
+                                <span id="curPrice11" class="ticker-center">05</span>
+                                <span id="podAsk11" class="ticker-rightelem">0</span>
+                            </div>
+                            <div class="ask-quoted-by-panel">
+                                <span id="podQuoteCcy1" class="ask-quoted-by">CIti</span>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -64,7 +68,7 @@
                     <div style="width:100%;margin-top:0px;">
                         <div class="priceControlPanel">
                             <div class="subpriceControlPanel">
-                                <button class="bid-ask form-control"> Bid</button>
+                                <button class="bid-ask form-control">Bid</button>
                                 <div id="dropdowntheme">
                                     <label for="priceDropDown" id="lblPriceDropdown">
                                         <svg class="refresh-svg" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
@@ -86,79 +90,63 @@
                     </div>
 
                 </div>
-                <div class="item subitem">
-                    <div class="dateSelectorParentPanel">
-                        <div>
-                            <div class="dateSelectorPanel">
-                                <svg class="icon-border" xmlns="http://www.w3.org/2000/svg"
-                                    xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img"
-                                    id="footer-icon-name" width="1em" height="1em" preserveAspectRatio="xMidYMid meet"
-                                    viewBox="0 0 36 36">
-                                    <path class="clr-i-solid clr-i-solid-path-1"
-                                        d="M32.25 6h-4v3a2.2 2.2 0 1 1-4.4 0V6H12.2v3a2.2 2.2 0 0 1-4.4 0V6h-4A1.78 1.78 0 0 0 2 7.81v22.38A1.78 1.78 0 0 0 3.75 32h28.5A1.78 1.78 0 0 0 34 30.19V7.81A1.78 1.78 0 0 0 32.25 6zM10 26H8v-2h2zm0-5H8v-2h2zm0-5H8v-2h2zm6 10h-2v-2h2zm0-5h-2v-2h2zm0-5h-2v-2h2zm6 10h-2v-2h2zm0-5h-2v-2h2zm0-5h-2v-2h2zm6 10h-2v-2h2zm0-5h-2v-2h2zm0-5h-2v-2h2z"
-                                        fill="currentColor"></path>
-                                    <path class="clr-i-solid clr-i-solid-path-2"
-                                        d="M10 10a1 1 0 0 0 1-1V3a1 1 0 0 0-2 0v6a1 1 0 0 0 1 1z" fill="currentColor">
+                <div class="item subitem control-items-lastrow">
+
+                    <svg class="icon-border" xmlns="http://www.w3.org/2000/svg"
+                        xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" id="footer-icon-name"
+                        width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 36 36">
+                        <path class="clr-i-solid clr-i-solid-path-1"
+                            d="M32.25 6h-4v3a2.2 2.2 0 1 1-4.4 0V6H12.2v3a2.2 2.2 0 0 1-4.4 0V6h-4A1.78 1.78 0 0 0 2 7.81v22.38A1.78 1.78 0 0 0 3.75 32h28.5A1.78 1.78 0 0 0 34 30.19V7.81A1.78 1.78 0 0 0 32.25 6zM10 26H8v-2h2zm0-5H8v-2h2zm0-5H8v-2h2zm6 10h-2v-2h2zm0-5h-2v-2h2zm0-5h-2v-2h2zm6 10h-2v-2h2zm0-5h-2v-2h2zm0-5h-2v-2h2zm6 10h-2v-2h2zm0-5h-2v-2h2zm0-5h-2v-2h2z"
+                            fill="currentColor"></path>
+                        <path class="clr-i-solid clr-i-solid-path-2"
+                            d="M10 10a1 1 0 0 0 1-1V3a1 1 0 0 0-2 0v6a1 1 0 0 0 1 1z" fill="currentColor">
+                        </path>
+                        <path class="clr-i-solid clr-i-solid-path-3"
+                            d="M26 10a1 1 0 0 0 1-1V3a1 1 0 0 0-2 0v6a1 1 0 0 0 1 1z" fill="currentColor">
+                        </path>
+                    </svg>
+
+                    <img class="ImageAtBottomPanel"
+                        src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABmJLR0QA/wD/AP+gvaeTAAAAqUlEQVRIiWNgGOqAEZtgaMNVtq/8PM0MjIyxjAwMd7cWyNniMwSfeiZsGr4I8DUxMDKWMTAwSP5nZPhPyJX41LNg1/I/loGBgYGR8Z/11nyFY4QswKceqw8YGRikGBgYGIgzHL96HD5AAO8Jjw7/Z2CwIcYibACrD6gJCPqAUApiYGBg8JrwCGdCGHgfjMbBwPtgNA4G3gejcYDVAkYGhiPE1GTkqh9aAABJwEdwkETfHgAAAABJRU5ErkJggg==">
+
+                        <span class="bid-ask-panel">
+                            <span class="bid-ask form-control"> 1M</span>
+    
+                            <input class="date" type="date" name="date" required="" pattern="\d{4}-\d{2}-\d{2}" min="2021-04-01" max="2021-10-31">
+                            <label for="date">
+                                <svg class="icon-border" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" id="footer-icon-name" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 36 36">
+                                    <path class="clr-i-solid clr-i-solid-path-1" d="M32.25 6h-4v3a2.2 2.2 0 1 1-4.4 0V6H12.2v3a2.2 2.2 0 0 1-4.4 0V6h-4A1.78 1.78 0 0 0 2 7.81v22.38A1.78 1.78 0 0 0 3.75 32h28.5A1.78 1.78 0 0 0 34 30.19V7.81A1.78 1.78 0 0 0 32.25 6zM10 26H8v-2h2zm0-5H8v-2h2zm0-5H8v-2h2zm6 10h-2v-2h2zm0-5h-2v-2h2zm0-5h-2v-2h2zm6 10h-2v-2h2zm0-5h-2v-2h2zm0-5h-2v-2h2zm6 10h-2v-2h2zm0-5h-2v-2h2zm0-5h-2v-2h2z" fill="currentColor"></path>
+                                    <path class="clr-i-solid clr-i-solid-path-2" d="M10 10a1 1 0 0 0 1-1V3a1 1 0 0 0-2 0v6a1 1 0 0 0 1 1z" fill="currentColor">
                                     </path>
-                                    <path class="clr-i-solid clr-i-solid-path-3"
-                                        d="M26 10a1 1 0 0 0 1-1V3a1 1 0 0 0-2 0v6a1 1 0 0 0 1 1z" fill="currentColor">
+                                    <path class="clr-i-solid clr-i-solid-path-3" d="M26 10a1 1 0 0 0 1-1V3a1 1 0 0 0-2 0v6a1 1 0 0 0 1 1z" fill="currentColor">
                                     </path>
                                 </svg>
-
-                                <img class="ImageAtBottomPanel"
-                                    src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABmJLR0QA/wD/AP+gvaeTAAAAqUlEQVRIiWNgGOqAEZtgaMNVtq/8PM0MjIyxjAwMd7cWyNniMwSfeiZsGr4I8DUxMDKWMTAwSP5nZPhPyJX41LNg1/I/loGBgYGR8Z/11nyFY4QswKceqw8YGRikGBgYGIgzHL96HD5AAO8Jjw7/Z2CwIcYibACrD6gJCPqAUApiYGBg8JrwCGdCGHgfjMbBwPtgNA4G3gejcYDVAkYGhiPE1GTkqh9aAABJwEdwkETfHgAAAABJRU5ErkJggg==" />
-                                <label class="bid-ask form-control"> 1M</label>
-
-                                <input class="date" type="date" name="date" required="" pattern="\d{4}-\d{2}-\d{2}"
-                                    min="2021-04-01" max="2021-10-31">
-                                <label for="date">
-                                    <svg class="icon-border" xmlns="http://www.w3.org/2000/svg"
-                                        xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img"
-                                        id="footer-icon-name" width="1em" height="1em"
-                                        preserveAspectRatio="xMidYMid meet" viewBox="0 0 36 36">
-                                        <path class="clr-i-solid clr-i-solid-path-1"
-                                            d="M32.25 6h-4v3a2.2 2.2 0 1 1-4.4 0V6H12.2v3a2.2 2.2 0 0 1-4.4 0V6h-4A1.78 1.78 0 0 0 2 7.81v22.38A1.78 1.78 0 0 0 3.75 32h28.5A1.78 1.78 0 0 0 34 30.19V7.81A1.78 1.78 0 0 0 32.25 6zM10 26H8v-2h2zm0-5H8v-2h2zm0-5H8v-2h2zm6 10h-2v-2h2zm0-5h-2v-2h2zm0-5h-2v-2h2zm6 10h-2v-2h2zm0-5h-2v-2h2zm0-5h-2v-2h2zm6 10h-2v-2h2zm0-5h-2v-2h2zm0-5h-2v-2h2z"
-                                            fill="currentColor"></path>
-                                        <path class="clr-i-solid clr-i-solid-path-2"
-                                            d="M10 10a1 1 0 0 0 1-1V3a1 1 0 0 0-2 0v6a1 1 0 0 0 1 1z"
-                                            fill="currentColor">
-                                        </path>
-                                        <path class="clr-i-solid clr-i-solid-path-3"
-                                            d="M26 10a1 1 0 0 0 1-1V3a1 1 0 0 0-2 0v6a1 1 0 0 0 1 1z"
-                                            fill="currentColor">
-                                        </path>
-                                    </svg>
-                                </label>
-                                <svg class="icon-border" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-                                    viewBox="0 0 24 24" fill="none" stroke="blue" stroke-width="2"
-                                    stroke-linecap="round" stroke-linejoin="round" class="feather feather-file-text">
-                                    <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
-                                    <polyline points="14 2 14 8 20 8"></polyline>
-                                    <line x1="16" y1="13" x2="8" y2="13"></line>
-                                    <line x1="16" y1="17" x2="8" y2="17"></line>
-                                    <polyline points="10 9 9 9 8 9"></polyline>
-                                </svg>
-                                <svg class="icon-border" xmlns="http://www.w3.org/2000/svg" width="20" height="20"
-                                    viewBox="0 0 24 24" fill="none" stroke="blue" stroke-width="2"
-                                    stroke-linecap="round" stroke-linejoin="round" class="feather feather-layers">
-                                    <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
-                                    <polyline points="2 17 12 22 22 17"></polyline>
-                                    <polyline points="2 12 12 17 22 12"></polyline>
-                                </svg>
-                            </div>
-                        </div>
-                    </div>
-
+                            </label>
+                        </span>
+                    <svg class="icon-border" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                        viewBox="0 0 24 24" fill="none" stroke="blue" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                        <polyline points="14 2 14 8 20 8"></polyline>
+                        <line x1="16" y1="13" x2="8" y2="13"></line>
+                        <line x1="16" y1="17" x2="8" y2="17"></line>
+                        <polyline points="10 9 9 9 8 9"></polyline>
+                    </svg>
+                    <svg class="icon-border" xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                        viewBox="0 0 24 24" fill="none" stroke="blue" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
+                        <polyline points="2 17 12 22 22 17"></polyline>
+                        <polyline points="2 12 12 17 22 12"></polyline>
+                    </svg>
                 </div>
-
-
             </div>
             <div class="item ">
                 <div class="item subitem">
                     <div class="currency-pair-container">
                         <span>
-                            <span class="whiteFont cap underline" style="margin-top:0px">EUR</span>
-                            <span class="greyFontColor">USD </span>
+                            <span class="whiteFont cap underline" id="baseCcy2" style="margin-top:0px"></span>
+                            <span class="greyFontColor" id="quoteCcy2"> </span>
                         </span>
                         <div class="full-amount-container">
                             <div style="white-space:nowrap;">
@@ -187,15 +175,21 @@
                 </div>
                 <div class="item subitem">
                     <div class="ticker-row">
-                        <div class="grid-child  item-box" style="display:inline-block">
-                            <div><span class="ticker-left">1.18</span><span class="ticker-center">05</span><span
-                                    class="ticker-rightelem">0</span></div>
-                            <div><span class="bid-quoted-by">BNP</span></div>
+                        <div class="grid-child  item-box">
+                            <div><span id="podBid2" class="ticker-left">1.18</span>
+                                <span id="curPrice2" class="ticker-center">05</span>
+                                <span id="podBid22" class="ticker-rightelem">0</span>
+                            </div>
+                            <div><span id="podBase2" class="bid-quoted-by">BNP3</span></div>
                         </div>
-                        <div class="grid-child  item-box " style="display:inline-block">
-                            <div><span class="ticker-left">1.18</span><span class="ticker-center">05</span><span
-                                    class="ticker-rightelem">0</span></div>
-                            <div class="ask-quoted-by-panel"><span class="ask-quoted-by">BNP</span></div>
+                        <div class="grid-child  item-box ">
+                            <div><span id="podAsk2" class="ticker-left">1.18</span>
+                                <span id="curPrice22" class="ticker-center">05</span>
+                                <span id="podAsk22" class="ticker-rightelem">0</span>
+                            </div>
+                            <div class="ask-quoted-by-panel">
+                                <span id="podQuoteCcy2" class="ask-quoted-by">CIti3</span>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -225,80 +219,63 @@
                     </div>
 
                 </div>
-                <div class="item subitem">
-                    <div class="dateSelectorParentPanel">
-                        <div>
-                            <div class="dateSelectorPanel">
-                                <svg class="icon-border" xmlns="http://www.w3.org/2000/svg"
-                                    xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img"
-                                    id="footer-icon-name" width="1em" height="1em" preserveAspectRatio="xMidYMid meet"
-                                    viewBox="0 0 36 36">
-                                    <path class="clr-i-solid clr-i-solid-path-1"
-                                        d="M32.25 6h-4v3a2.2 2.2 0 1 1-4.4 0V6H12.2v3a2.2 2.2 0 0 1-4.4 0V6h-4A1.78 1.78 0 0 0 2 7.81v22.38A1.78 1.78 0 0 0 3.75 32h28.5A1.78 1.78 0 0 0 34 30.19V7.81A1.78 1.78 0 0 0 32.25 6zM10 26H8v-2h2zm0-5H8v-2h2zm0-5H8v-2h2zm6 10h-2v-2h2zm0-5h-2v-2h2zm0-5h-2v-2h2zm6 10h-2v-2h2zm0-5h-2v-2h2zm0-5h-2v-2h2zm6 10h-2v-2h2zm0-5h-2v-2h2zm0-5h-2v-2h2z"
-                                        fill="currentColor"></path>
-                                    <path class="clr-i-solid clr-i-solid-path-2"
-                                        d="M10 10a1 1 0 0 0 1-1V3a1 1 0 0 0-2 0v6a1 1 0 0 0 1 1z" fill="currentColor">
+                <div class="item subitem control-items-lastrow">
+
+                    <svg class="icon-border" xmlns="http://www.w3.org/2000/svg"
+                        xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" id="footer-icon-name"
+                        width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 36 36">
+                        <path class="clr-i-solid clr-i-solid-path-1"
+                            d="M32.25 6h-4v3a2.2 2.2 0 1 1-4.4 0V6H12.2v3a2.2 2.2 0 0 1-4.4 0V6h-4A1.78 1.78 0 0 0 2 7.81v22.38A1.78 1.78 0 0 0 3.75 32h28.5A1.78 1.78 0 0 0 34 30.19V7.81A1.78 1.78 0 0 0 32.25 6zM10 26H8v-2h2zm0-5H8v-2h2zm0-5H8v-2h2zm6 10h-2v-2h2zm0-5h-2v-2h2zm0-5h-2v-2h2zm6 10h-2v-2h2zm0-5h-2v-2h2zm0-5h-2v-2h2zm6 10h-2v-2h2zm0-5h-2v-2h2zm0-5h-2v-2h2z"
+                            fill="currentColor"></path>
+                        <path class="clr-i-solid clr-i-solid-path-2"
+                            d="M10 10a1 1 0 0 0 1-1V3a1 1 0 0 0-2 0v6a1 1 0 0 0 1 1z" fill="currentColor">
+                        </path>
+                        <path class="clr-i-solid clr-i-solid-path-3"
+                            d="M26 10a1 1 0 0 0 1-1V3a1 1 0 0 0-2 0v6a1 1 0 0 0 1 1z" fill="currentColor">
+                        </path>
+                    </svg>
+
+                    <img class="ImageAtBottomPanel"
+                        src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABmJLR0QA/wD/AP+gvaeTAAAAqUlEQVRIiWNgGOqAEZtgaMNVtq/8PM0MjIyxjAwMd7cWyNniMwSfeiZsGr4I8DUxMDKWMTAwSP5nZPhPyJX41LNg1/I/loGBgYGR8Z/11nyFY4QswKceqw8YGRikGBgYGIgzHL96HD5AAO8Jjw7/Z2CwIcYibACrD6gJCPqAUApiYGBg8JrwCGdCGHgfjMbBwPtgNA4G3gejcYDVAkYGhiPE1GTkqh9aAABJwEdwkETfHgAAAABJRU5ErkJggg==">
+
+                        <span class="bid-ask-panel">
+                            <span class="bid-ask form-control"> 1M</span>
+    
+                            <input class="date" type="date" name="date" required="" pattern="\d{4}-\d{2}-\d{2}" min="2021-04-01" max="2021-10-31">
+                            <label for="date">
+                                <svg class="icon-border" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" id="footer-icon-name" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 36 36">
+                                    <path class="clr-i-solid clr-i-solid-path-1" d="M32.25 6h-4v3a2.2 2.2 0 1 1-4.4 0V6H12.2v3a2.2 2.2 0 0 1-4.4 0V6h-4A1.78 1.78 0 0 0 2 7.81v22.38A1.78 1.78 0 0 0 3.75 32h28.5A1.78 1.78 0 0 0 34 30.19V7.81A1.78 1.78 0 0 0 32.25 6zM10 26H8v-2h2zm0-5H8v-2h2zm0-5H8v-2h2zm6 10h-2v-2h2zm0-5h-2v-2h2zm0-5h-2v-2h2zm6 10h-2v-2h2zm0-5h-2v-2h2zm0-5h-2v-2h2zm6 10h-2v-2h2zm0-5h-2v-2h2zm0-5h-2v-2h2z" fill="currentColor"></path>
+                                    <path class="clr-i-solid clr-i-solid-path-2" d="M10 10a1 1 0 0 0 1-1V3a1 1 0 0 0-2 0v6a1 1 0 0 0 1 1z" fill="currentColor">
                                     </path>
-                                    <path class="clr-i-solid clr-i-solid-path-3"
-                                        d="M26 10a1 1 0 0 0 1-1V3a1 1 0 0 0-2 0v6a1 1 0 0 0 1 1z" fill="currentColor">
+                                    <path class="clr-i-solid clr-i-solid-path-3" d="M26 10a1 1 0 0 0 1-1V3a1 1 0 0 0-2 0v6a1 1 0 0 0 1 1z" fill="currentColor">
                                     </path>
                                 </svg>
-
-                                <img class="ImageAtBottomPanel"
-                                    src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABmJLR0QA/wD/AP+gvaeTAAAAqUlEQVRIiWNgGOqAEZtgaMNVtq/8PM0MjIyxjAwMd7cWyNniMwSfeiZsGr4I8DUxMDKWMTAwSP5nZPhPyJX41LNg1/I/loGBgYGR8Z/11nyFY4QswKceqw8YGRikGBgYGIgzHL96HD5AAO8Jjw7/Z2CwIcYibACrD6gJCPqAUApiYGBg8JrwCGdCGHgfjMbBwPtgNA4G3gejcYDVAkYGhiPE1GTkqh9aAABJwEdwkETfHgAAAABJRU5ErkJggg==" />
-                                <label class="bid-ask form-control"> 1M</label>
-
-                                <input class="date" type="date" name="date" required="" pattern="\d{4}-\d{2}-\d{2}"
-                                    min="2021-04-01" max="2021-10-31">
-                                <label for="date">
-                                    <svg class="icon-border" xmlns="http://www.w3.org/2000/svg"
-                                        xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img"
-                                        id="footer-icon-name" width="1em" height="1em"
-                                        preserveAspectRatio="xMidYMid meet" viewBox="0 0 36 36">
-                                        <path class="clr-i-solid clr-i-solid-path-1"
-                                            d="M32.25 6h-4v3a2.2 2.2 0 1 1-4.4 0V6H12.2v3a2.2 2.2 0 0 1-4.4 0V6h-4A1.78 1.78 0 0 0 2 7.81v22.38A1.78 1.78 0 0 0 3.75 32h28.5A1.78 1.78 0 0 0 34 30.19V7.81A1.78 1.78 0 0 0 32.25 6zM10 26H8v-2h2zm0-5H8v-2h2zm0-5H8v-2h2zm6 10h-2v-2h2zm0-5h-2v-2h2zm0-5h-2v-2h2zm6 10h-2v-2h2zm0-5h-2v-2h2zm0-5h-2v-2h2zm6 10h-2v-2h2zm0-5h-2v-2h2zm0-5h-2v-2h2z"
-                                            fill="currentColor"></path>
-                                        <path class="clr-i-solid clr-i-solid-path-2"
-                                            d="M10 10a1 1 0 0 0 1-1V3a1 1 0 0 0-2 0v6a1 1 0 0 0 1 1z"
-                                            fill="currentColor">
-                                        </path>
-                                        <path class="clr-i-solid clr-i-solid-path-3"
-                                            d="M26 10a1 1 0 0 0 1-1V3a1 1 0 0 0-2 0v6a1 1 0 0 0 1 1z"
-                                            fill="currentColor">
-                                        </path>
-                                    </svg>
-                                </label>
-                                <svg class="icon-border" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-                                    viewBox="0 0 24 24" fill="none" stroke="blue" stroke-width="2"
-                                    stroke-linecap="round" stroke-linejoin="round" class="feather feather-file-text">
-                                    <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
-                                    <polyline points="14 2 14 8 20 8"></polyline>
-                                    <line x1="16" y1="13" x2="8" y2="13"></line>
-                                    <line x1="16" y1="17" x2="8" y2="17"></line>
-                                    <polyline points="10 9 9 9 8 9"></polyline>
-                                </svg>
-                                <svg class="icon-border" xmlns="http://www.w3.org/2000/svg" width="20" height="20"
-                                    viewBox="0 0 24 24" fill="none" stroke="blue" stroke-width="2"
-                                    stroke-linecap="round" stroke-linejoin="round" class="feather feather-layers">
-                                    <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
-                                    <polyline points="2 17 12 22 22 17"></polyline>
-                                    <polyline points="2 12 12 17 22 12"></polyline>
-                                </svg>
-                            </div>
-                        </div>
-                    </div>
-
+                            </label>
+                        </span>
+                    <svg class="icon-border" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                        viewBox="0 0 24 24" fill="none" stroke="blue" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                        <polyline points="14 2 14 8 20 8"></polyline>
+                        <line x1="16" y1="13" x2="8" y2="13"></line>
+                        <line x1="16" y1="17" x2="8" y2="17"></line>
+                        <polyline points="10 9 9 9 8 9"></polyline>
+                    </svg>
+                    <svg class="icon-border" xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                        viewBox="0 0 24 24" fill="none" stroke="blue" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
+                        <polyline points="2 17 12 22 22 17"></polyline>
+                        <polyline points="2 12 12 17 22 12"></polyline>
+                    </svg>
                 </div>
-
-
             </div>
-
             <div class="item ">
                 <div class="item subitem">
                     <div class="currency-pair-container">
                         <span>
-                            <span class="whiteFont cap underline" style="margin-top:0px">EUR</span>
-                            <span class="greyFontColor">USD </span>
+                            <span class="whiteFont cap underline" id="baseCcy3" style="margin-top:0px"></span>
+                            <span class="greyFontColor" id="quoteCcy3"> </span>
                         </span>
                         <div class="full-amount-container">
                             <div style="white-space:nowrap;">
@@ -327,15 +304,21 @@
                 </div>
                 <div class="item subitem">
                     <div class="ticker-row">
-                        <div class="grid-child  item-box" style="display:inline-block">
-                            <div><span class="ticker-left">1.18</span><span class="ticker-center">05</span><span
-                                    class="ticker-rightelem">0</span></div>
-                            <div><span class="bid-quoted-by">BNP</span></div>
+                        <div class="grid-child  item-box">
+                            <div><span id="podBid3" class="ticker-left">1.18</span>
+                                <span id="curPrice3" class="ticker-center">05</span>
+                                <span id="podBid33" class="ticker-rightelem">0</span>
+                            </div>
+                            <div><span id="podBase3" class="bid-quoted-by">BNP3</span></div>
                         </div>
-                        <div class="grid-child  item-box " style="display:inline-block">
-                            <div><span class="ticker-left">1.18</span><span class="ticker-center">05</span><span
-                                    class="ticker-rightelem">0</span></div>
-                            <div class="ask-quoted-by-panel"><span class="ask-quoted-by">BNP</span></div>
+                        <div class="grid-child  item-box ">
+                            <div><span id="podAsk3" class="ticker-left">1.18</span>
+                                <span id="curPrice33" class="ticker-center">05</span>
+                                <span id="podAsk33" class="ticker-rightelem">0</span>
+                            </div>
+                            <div class="ask-quoted-by-panel">
+                                <span id="podQuoteCcy3" class="ask-quoted-by">CIti3</span>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -365,144 +348,66 @@
                     </div>
 
                 </div>
-                <div class="item subitem">
-                    <div class="dateSelectorParentPanel">
-                        <div>
-                            <div class="dateSelectorPanel">
-                                <svg class="icon-border" xmlns="http://www.w3.org/2000/svg"
-                                    xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img"
-                                    id="footer-icon-name" width="1em" height="1em" preserveAspectRatio="xMidYMid meet"
-                                    viewBox="0 0 36 36">
-                                    <path class="clr-i-solid clr-i-solid-path-1"
-                                        d="M32.25 6h-4v3a2.2 2.2 0 1 1-4.4 0V6H12.2v3a2.2 2.2 0 0 1-4.4 0V6h-4A1.78 1.78 0 0 0 2 7.81v22.38A1.78 1.78 0 0 0 3.75 32h28.5A1.78 1.78 0 0 0 34 30.19V7.81A1.78 1.78 0 0 0 32.25 6zM10 26H8v-2h2zm0-5H8v-2h2zm0-5H8v-2h2zm6 10h-2v-2h2zm0-5h-2v-2h2zm0-5h-2v-2h2zm6 10h-2v-2h2zm0-5h-2v-2h2zm0-5h-2v-2h2zm6 10h-2v-2h2zm0-5h-2v-2h2zm0-5h-2v-2h2z"
-                                        fill="currentColor"></path>
-                                    <path class="clr-i-solid clr-i-solid-path-2"
-                                        d="M10 10a1 1 0 0 0 1-1V3a1 1 0 0 0-2 0v6a1 1 0 0 0 1 1z" fill="currentColor">
+                <div class="item subitem control-items-lastrow">
+
+                    <svg class="icon-border" xmlns="http://www.w3.org/2000/svg"
+                        xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" id="footer-icon-name"
+                        width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 36 36">
+                        <path class="clr-i-solid clr-i-solid-path-1"
+                            d="M32.25 6h-4v3a2.2 2.2 0 1 1-4.4 0V6H12.2v3a2.2 2.2 0 0 1-4.4 0V6h-4A1.78 1.78 0 0 0 2 7.81v22.38A1.78 1.78 0 0 0 3.75 32h28.5A1.78 1.78 0 0 0 34 30.19V7.81A1.78 1.78 0 0 0 32.25 6zM10 26H8v-2h2zm0-5H8v-2h2zm0-5H8v-2h2zm6 10h-2v-2h2zm0-5h-2v-2h2zm0-5h-2v-2h2zm6 10h-2v-2h2zm0-5h-2v-2h2zm0-5h-2v-2h2zm6 10h-2v-2h2zm0-5h-2v-2h2zm0-5h-2v-2h2z"
+                            fill="currentColor"></path>
+                        <path class="clr-i-solid clr-i-solid-path-2"
+                            d="M10 10a1 1 0 0 0 1-1V3a1 1 0 0 0-2 0v6a1 1 0 0 0 1 1z" fill="currentColor">
+                        </path>
+                        <path class="clr-i-solid clr-i-solid-path-3"
+                            d="M26 10a1 1 0 0 0 1-1V3a1 1 0 0 0-2 0v6a1 1 0 0 0 1 1z" fill="currentColor">
+                        </path>
+                    </svg>
+
+                    <img class="ImageAtBottomPanel"
+                        src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABmJLR0QA/wD/AP+gvaeTAAAAqUlEQVRIiWNgGOqAEZtgaMNVtq/8PM0MjIyxjAwMd7cWyNniMwSfeiZsGr4I8DUxMDKWMTAwSP5nZPhPyJX41LNg1/I/loGBgYGR8Z/11nyFY4QswKceqw8YGRikGBgYGIgzHL96HD5AAO8Jjw7/Z2CwIcYibACrD6gJCPqAUApiYGBg8JrwCGdCGHgfjMbBwPtgNA4G3gejcYDVAkYGhiPE1GTkqh9aAABJwEdwkETfHgAAAABJRU5ErkJggg==">
+
+                        <span class="bid-ask-panel">
+                            <span class="bid-ask form-control"> 1M</span>
+    
+                            <input class="date" type="date" name="date" required="" pattern="\d{4}-\d{2}-\d{2}" min="2021-04-01" max="2021-10-31">
+                            <label for="date">
+                                <svg class="icon-border" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" id="footer-icon-name" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 36 36">
+                                    <path class="clr-i-solid clr-i-solid-path-1" d="M32.25 6h-4v3a2.2 2.2 0 1 1-4.4 0V6H12.2v3a2.2 2.2 0 0 1-4.4 0V6h-4A1.78 1.78 0 0 0 2 7.81v22.38A1.78 1.78 0 0 0 3.75 32h28.5A1.78 1.78 0 0 0 34 30.19V7.81A1.78 1.78 0 0 0 32.25 6zM10 26H8v-2h2zm0-5H8v-2h2zm0-5H8v-2h2zm6 10h-2v-2h2zm0-5h-2v-2h2zm0-5h-2v-2h2zm6 10h-2v-2h2zm0-5h-2v-2h2zm0-5h-2v-2h2zm6 10h-2v-2h2zm0-5h-2v-2h2zm0-5h-2v-2h2z" fill="currentColor"></path>
+                                    <path class="clr-i-solid clr-i-solid-path-2" d="M10 10a1 1 0 0 0 1-1V3a1 1 0 0 0-2 0v6a1 1 0 0 0 1 1z" fill="currentColor">
                                     </path>
-                                    <path class="clr-i-solid clr-i-solid-path-3"
-                                        d="M26 10a1 1 0 0 0 1-1V3a1 1 0 0 0-2 0v6a1 1 0 0 0 1 1z" fill="currentColor">
+                                    <path class="clr-i-solid clr-i-solid-path-3" d="M26 10a1 1 0 0 0 1-1V3a1 1 0 0 0-2 0v6a1 1 0 0 0 1 1z" fill="currentColor">
                                     </path>
                                 </svg>
-
-                                <img class="ImageAtBottomPanel"
-                                    src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABmJLR0QA/wD/AP+gvaeTAAAAqUlEQVRIiWNgGOqAEZtgaMNVtq/8PM0MjIyxjAwMd7cWyNniMwSfeiZsGr4I8DUxMDKWMTAwSP5nZPhPyJX41LNg1/I/loGBgYGR8Z/11nyFY4QswKceqw8YGRikGBgYGIgzHL96HD5AAO8Jjw7/Z2CwIcYibACrD6gJCPqAUApiYGBg8JrwCGdCGHgfjMbBwPtgNA4G3gejcYDVAkYGhiPE1GTkqh9aAABJwEdwkETfHgAAAABJRU5ErkJggg==" />
-                                <label class="bid-ask form-control"> 1M</label>
-
-                                <input class="date" type="date" name="date" required="" pattern="\d{4}-\d{2}-\d{2}"
-                                    min="2021-04-01" max="2021-10-31">
-                                <label for="date">
-                                    <svg class="icon-border" xmlns="http://www.w3.org/2000/svg"
-                                        xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img"
-                                        id="footer-icon-name" width="1em" height="1em"
-                                        preserveAspectRatio="xMidYMid meet" viewBox="0 0 36 36">
-                                        <path class="clr-i-solid clr-i-solid-path-1"
-                                            d="M32.25 6h-4v3a2.2 2.2 0 1 1-4.4 0V6H12.2v3a2.2 2.2 0 0 1-4.4 0V6h-4A1.78 1.78 0 0 0 2 7.81v22.38A1.78 1.78 0 0 0 3.75 32h28.5A1.78 1.78 0 0 0 34 30.19V7.81A1.78 1.78 0 0 0 32.25 6zM10 26H8v-2h2zm0-5H8v-2h2zm0-5H8v-2h2zm6 10h-2v-2h2zm0-5h-2v-2h2zm0-5h-2v-2h2zm6 10h-2v-2h2zm0-5h-2v-2h2zm0-5h-2v-2h2zm6 10h-2v-2h2zm0-5h-2v-2h2zm0-5h-2v-2h2z"
-                                            fill="currentColor"></path>
-                                        <path class="clr-i-solid clr-i-solid-path-2"
-                                            d="M10 10a1 1 0 0 0 1-1V3a1 1 0 0 0-2 0v6a1 1 0 0 0 1 1z"
-                                            fill="currentColor">
-                                        </path>
-                                        <path class="clr-i-solid clr-i-solid-path-3"
-                                            d="M26 10a1 1 0 0 0 1-1V3a1 1 0 0 0-2 0v6a1 1 0 0 0 1 1z"
-                                            fill="currentColor">
-                                        </path>
-                                    </svg>
-                                </label>
-                                <svg class="icon-border" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-                                    viewBox="0 0 24 24" fill="none" stroke="blue" stroke-width="2"
-                                    stroke-linecap="round" stroke-linejoin="round" class="feather feather-file-text">
-                                    <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
-                                    <polyline points="14 2 14 8 20 8"></polyline>
-                                    <line x1="16" y1="13" x2="8" y2="13"></line>
-                                    <line x1="16" y1="17" x2="8" y2="17"></line>
-                                    <polyline points="10 9 9 9 8 9"></polyline>
-                                </svg>
-                                <svg class="icon-border" xmlns="http://www.w3.org/2000/svg" width="20" height="20"
-                                    viewBox="0 0 24 24" fill="none" stroke="blue" stroke-width="2"
-                                    stroke-linecap="round" stroke-linejoin="round" class="feather feather-layers">
-                                    <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
-                                    <polyline points="2 17 12 22 22 17"></polyline>
-                                    <polyline points="2 12 12 17 22 12"></polyline>
-                                </svg>
-                            </div>
-                        </div>
-                    </div>
-
+                            </label>
+                        </span>
+                    <svg class="icon-border" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                        viewBox="0 0 24 24" fill="none" stroke="blue" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                        <polyline points="14 2 14 8 20 8"></polyline>
+                        <line x1="16" y1="13" x2="8" y2="13"></line>
+                        <line x1="16" y1="17" x2="8" y2="17"></line>
+                        <polyline points="10 9 9 9 8 9"></polyline>
+                    </svg>
+                    <svg class="icon-border" xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                        viewBox="0 0 24 24" fill="none" stroke="blue" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
+                        <polyline points="2 17 12 22 22 17"></polyline>
+                        <polyline points="2 12 12 17 22 12"></polyline>
+                    </svg>
                 </div>
-
-
             </div>
         </div>
+    <div style="display:flex;justify-content: center; align-items:center;">
+        <label for="messages" style="color:black;background:white">Connection Status:</label><br />
+        <h2 id="messages" class="dead">
+            Dead
+        </h2>
     </div>
-
-    <br/>
-    <br/>
-    <br/>
-    <br/>
-
-    <h1>Choose an action.</h1>
-    <button id="login" type="button" title="Simulate login">
-        Simulate login
-    </button>
-    <button id="logout" type="button" title="Simulate logout">
-        Simulate logout
-    </button>
-    <button id="wsButton" type="button" title="Open WebSocket connection">
-        Open WebSocket connection
-    </button>
-    <button id="wsSendButton" type="button" title="Send WebSocket message">
-        Send WebSocket message
-    </button>
-    <pre id="messages" style="color:navy;height: 400px; overflow: scroll"></pre>
-    <hr />
-
-
-    <!--
-<form class="form-inline">
-    <div class="form-group">
-        <label for="txtServerurl">Server:</label> &nbsp; 
-        <input type="text" id="txtServerurl" value="v2api.coinflex.com/v2/websocket"
-        placeholder="Server IP:WebSocket Port" class="form-control">&nbsp;&nbsp;
-        <button id="btnConnect" type="button" class="btn btn-sm btn-primary">Connect</button>
-    </div>
-    <br/><br/>
-    <div class="form-group">
-        <label for="txtUsername" >User:</label> &nbsp; <input type="text" id="txtUsername" class="form-control" placeholder="user">&nbsp;&nbsp;
-        <button id="btnLogin" type="button" class="btn btn-sm btn-primary">Login</button> &nbsp;&nbsp;
-        <button id="btnLogout" type="button" class="btn btn-sm btn-primary">Logout</button>
-    </div>
-    <br/>
-    <br/>
-    <div class="form-group">
-        <!--<label for="txtServiceName">Service Name:</label> &nbsp; <input type="text" id="txtServiceName" class="form-control"> &nbsp;&nbsp;-->
-    <label for="txtItemName">Item Name:</label>&nbsp;
-    <input type="text" id="txtItemName" value="" placeholder="IBM.N" class="form-control"> &nbsp;&nbsp;
-    <label for="txtServiceName">Service Name:</label> &nbsp; <input type="text" id="txtServiceName" class="form-control"
-        placeholder="[Optional]"> &nbsp;&nbsp;
-    <button id="btnSubscribe" type="button" class="btn btn-sm btn-primary">Subscribe</button> &nbsp;&nbsp;
-    <button id="btnUnSubscribe" type="button" class="btn btn-sm btn-primary">Unsubscribe</button>
-    </div>
-    </form>
-    <!-- Display outgoing messages and commands -->
-    <h5>Commands:</h5>
-    <div id="command">
-        <pre id="commandsPre">
-</pre>
-    </div>
-    <!-- Display incoming messages -->
-    <h5>Incoming Messages:</h5>
-    <div id="message">
-        <pre id="messagesPre">
-</pre>
-    </div>ss
-    </div>
-    -->
 </body>
-
-<script type="module" src="./app/ticker.js"></script>
-<script type="module" src="./app/ws-test.js"></script>
-
-<script type="module" src="./app/sharedworker.js"></script>
-<script type="module" src="./app/main.js"></script>
+<script src="/app/worker.js"></script>
+<script type="module" src="/app/main.js"></script>
 
 </html>

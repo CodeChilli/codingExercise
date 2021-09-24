@@ -1,35 +1,23 @@
-wss://v2api.coinflex.com/v2/websocket
+[
+    {
+        "marketPrice": "2.784",
+        "listingDate": "1593316800000",
+        "qtyIncrement": "0.1",
+        "upperPriceBound": "3.007",
+        "lowerPriceBound": "2.561",
+        "counter": "USD",
+        "type": "SPOT",
+        "marketId": "3001000000000",
+        "referencePair": "FLEX/USD",
+        "tickSize": "0.001",
+        "marketPriceLastUpdated": "1632390599019",
+        "contractValCurrency": "FLEX",
+        "name": "FLEX/USD",
+        "marketCode": "FLEX-USD",
+        "marginCurrency": "USD",
+        "base": "FLEX"
+    }
+]
 
-{
-	"event": "Welcome",
-	"nonce": "7d221b09",
-	"timestamp": "1632314556729"
-}
-
-
-
-{"success":true,"tag":"1","event":"subscribe","channel":"market:FLEX-USD","timestamp":"1632314569799"}
-
-{
-	"table": "market",
-	"data": [
-		{
-			"marketPrice": "2.795",
-			"listingDate": "1593316800000",
-			"qtyIncrement": "0.1",
-			"upperPriceBound": "3.019",
-			"lowerPriceBound": "2.571",
-			"counter": "USD",
-			"type": "SPOT",
-			"marketId": "3001000000000",
-			"referencePair": "FLEX/USD",
-			"tickSize": "0.001",
-			"marketPriceLastUpdated": "1632314570324",
-			"contractValCurrency": "FLEX",
-			"name": "FLEX/USD",
-			"marketCode": "FLEX-USD",
-			"marginCurrency": "USD",
-			"base": "FLEX"
-		}
-	]
-}
+data: Array(1)
+0:

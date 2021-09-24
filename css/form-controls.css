@@ -15,6 +15,10 @@
             
         }
 
+        span{
+            white-space: nowrap;
+        }
+
         button, button.bid-ask {
             background-color: rgb(59, 56, 56);
             border-width: 2px;
