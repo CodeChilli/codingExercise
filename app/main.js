@@ -1,5 +1,4 @@
 
-//Constant Values
 const baseCcy1 = window.document.getElementById('baseCcy1');
 const quoteCcy1 = window.document.getElementById('quoteCcy1');
 const quoteCcy2 = window.document.getElementById('quoteCcy2');
@@ -107,7 +106,7 @@ function update(c) {
     console.warn("no data");
     return;
   }
-  
+
   let n = c[c.length - 1];
 
   if (n.base == "BTC" && n.marginCurrency == "USD") {
